@@ -123,7 +123,7 @@ A single employee can act as **both** driver and passenger — these are activit
 # 🏗️ System Architecture
 
 > 📌 *Architecture diagram placeholder — replace this line with:*
-> `![Carpooling Architecture](docs/architecture.png)`
+> ![Carpooling Architecture](arch.png)
 
 ```text
                         ┌─────────────────────────┐
@@ -142,10 +142,10 @@ A single employee can act as **both** driver and passenger — these are activit
           ┌──────────────────────────┼──────────────────────────┐
           ▼                          ▼                          ▼
  ┌─────────────────┐      ┌────────────────────┐     ┌──────────────────┐
- │  SQLite Database │      │ RideMatchingService │     │  Mapbox Client    │
- │ users, vehicles, │      │  (orchestrator)     │     │ (optional live     │
- │ rides, bookings, │      └──────────┬───────────┘     │  traffic routing) │
- │ wallets, places  │                 │                  └──────────────────┘
+ │  SQLite Database │     │ RideMatchingService│     │Mapbox Client     │
+ │ users, vehicles, │     │  (orchestrator)    │     |(optional live     │
+ │ rides, bookings, │     └──────────┬─────────┘     | traffic routing)  │
+ │ wallets, places  │                │              └──────────────────┘
  └─────────────────┘                 ▼
                           ┌───────────────────────────┐
                           │  SpatialIndexService       │  ← Geohash cell lookup
