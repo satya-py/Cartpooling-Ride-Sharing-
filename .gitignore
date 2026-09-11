@@ -1,0 +1,5 @@
+*.pdf
+pytest_cache/
+*.txt
+frontend/node_modules/
+ride-matching-service/__pycache__/
